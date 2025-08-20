@@ -1,0 +1,33 @@
+Dataset Sources & Placement
+===========================
+
+MIMIC-IV DEMO (public, no credential)
+-------------------------------------
+- Download: PhysioNet “mimic-iv-clinical-database-demo-2.2.zip”
+- Unzip to: data/mimic-iv-demo/
+  Expected subfolders: core/, hosp/, icu/
+
+MIMIC-IV FULL (requires credential & CITI training)
+---------------------------------------------------
+- Access: https://physionet.org/content/mimiciv/
+- Follow the PhysioNet instructions to request access and accept data use agreement.
+- After download, keep the folder layout identical to the demo (core/hosp/icu).
+- Point scripts to the top-level folder via --mimic_root.
+
+eICU-CRD 2.0 (optional, requires credential)
+--------------------------------------------
+- Access: https://physionet.org/content/eicu-crd/
+- Export the CSVs; place under: data/eicu-crd/
+  Key tables used by our scripts: patient.csv, lab.csv (names may differ by export tool).
+- Run eICUDemo.py with --eicu_root data/eicu-crd
+
+eICU SYNTHETIC (no credential)
+------------------------------
+- Use the generator in this repo:
+  python codes/eICUDatagen.py --out_dir data/eicu-synth --n_stays 1200 --seed 7
+- This will produce data/eicu-synth/patient.csv and lab.csv with realistic distributions.
+
+Notes
+-----
+- If the CSV filenames differ, lightly edit the loader paths in the scripts.
+- Ensure UTF-8 encoding on all CSVs.

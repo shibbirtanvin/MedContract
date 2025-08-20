@@ -1,0 +1,6 @@
+Model,Calibration,AUC,ECE@5,Theta,AlertRate,ECE_Pass,AlertBudget_Pass,Contract_Pass,ECE_Note
+LogReg,isotonic,0.489,0.155,0.446,25.9%,✓,✓,✓,relaxed
+LogReg,sigmoid,0.481,0.004,0.49,37.0%,✓,✓,✓,strict
+GBM,isotonic,0.646,0.143,0.383,37.0%,✗,✓,✗,fail
+GBM,sigmoid,0.676,0.053,0.431,33.3%,✓,✓,✓,strict
+Ensemble(top-2 by ECE),avg(prob),0.602,0.024,0.453,37.0%,✓,✓,✓,strict

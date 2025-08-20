@@ -1,0 +1,5 @@
+Model,AUC,ECE@5,θ,Alert rate,Pass
+LogReg+isotonic,0.651,0.012,0.020,70.1%,No
+LogReg+sigmoid,0.785,0.014,0.018,40.1%,No
+GBM+isotonic,0.046,0.012,0.018,51.9%,No
+GBM+sigmoid,0.634,0.014,0.020,40.6%,No

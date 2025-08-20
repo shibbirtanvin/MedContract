@@ -1,0 +1,4 @@
+Contract,Metric / Threshold,Result,Pass?
+Temporal Consistency,Avg drop ≤ 12 h,0.0 h,✓
+Fairness (Careunit MAE gap),"Gap ≤ max(6 h, 0.5×overall MAE)","gap=49.6 h | overall MAE=47.8 h | MICU=72.9 (n=12), SICU=37.5 (n=13), OTHER=23.3 (n=7) | threshold=23.9 h (base 6.0, rel 0.5×MAE=47.8)",✗
+Occupancy Plausibility,|mean_pred − hist_mean| ≤ 3·σ,"mean_pred=40.9 h, hist_mean=90.0 h, σ=100.1 h",✓
