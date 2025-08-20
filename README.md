@@ -56,9 +56,9 @@ SEEDS AND DETERMINISM
 - All scripts set numpy/sklearn seeds (random_state) for repeatability.
 - Small numeric differences may occur across OS/BLAS; they won’t change pass/fail.
 
-======================================================================
+===================================
 A) MIMIC-IV DEMO – RUNS AND TABLES
-======================================================================
+===================================
 
 (1) Build cohort (optional; some scripts can read from raw demo directly):
     python codes/real_mimic_loader.py
@@ -90,9 +90,9 @@ A) MIMIC-IV DEMO – RUNS AND TABLES
       
 
 
-======================================================================
+===========================================
 B) eICU – SYNTHETIC DATA + RUNS AND TABLES
-======================================================================
+===========================================
 
 (1) Generate synthetic eICU CSVs (no credentials needed):
     python codes/eICUDatagen.py --out_dir data/eicu-synth --n_stays 1200 --seed 7
